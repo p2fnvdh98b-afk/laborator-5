@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <meta charset="UTF-8">
+    <body>
+<h2>HTML Forms</h2>
+<h1>1</h1>
+<form action="/action_page.php">
+    
+<h2 style="text-align:center;">Formular de înregistrare</h2>
+
+<form>
+<label>Nume </label>
+<input type="text" required>
+
+<label>Prenume </label>
+<input type="text" required>
+
+<label>Data nașterii </label>
+<input type="date" required>
+<br>
+<label>Gen </label>
+<select required>
+<option value="">Selectează</option>
+<option>Femeie</option>
+<option>Bărbat</option>
+<option>Altul</option>
+</select>
+
+<label>Email </label>
+<input type="email" required>
+
+<label>Telefon </label>
+<input type="tel" required>
+<br>
+<label>Nume utilizator </label>
+<input type="text" required minlength="4">
+<br>
+<label>Parolă </label>
+<input type="password" required minlength="6">
+<br>
+<label>Confirmare parolă </label>
+<input type="password" required>
+<br>
+<label><input type="checkbox" required> Accept termenii și condițiile </label>
+<br>
+<label><input type="checkbox"> Abonare la newsletter</label>
+<br>
+<button type="submit">Creează cont</button>
+</form>
+ 
+
+<h1>2</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular Comandă Produs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .product img {
+            width: 60px;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-reset {
+            background-color: #d9534f;
+            color: white;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+    <div class="container">
+        <h2>Formular de Comandă</h2>
+
+        <form>
+             
+            <label>Produs:</label>
+            <div class="product">
+                <input type="radio" name="produs" value="Tricou" required>
+                <img src="https://ombre.com/hpeciai/a98d7d8c7bdb690f80cfb3d070e1eb11/rum_pl_Tricou-clasic-din-bumbac-pentru-barbati-BASIC-negru-V1-OM-TSBS-0146-124272_1.webp" width="100" hight="50" alt="Tricou" >
+                <span>Tricou - 50 RON</span>
+            </div>
+
+            <div class="product">
+                <input type="radio" name="produs" value="Hanorac">
+                <img src="https://www.sofiaman.ro/cdn/shop/products/hanorac-barbati-negru-36459x-3.jpg?v=1702390069&width=1222" width="90"  height="80" alt="Hanorac">
+                <span>Hanorac - 120 RON</span>
+            </div>
+
+            <div class="product">
+                <input type="radio" name="produs" value="Geantă">
+                <img src="https://www.benvenuti.com/img/products/guess/barbati/genti/geanta-crossbody-barba-i-guess-neagra-cu-logo-metalic-frontal-92ebgeahmevzln-bfb70c.png" width="120"  height="60" alt="Geantă">
+                <span>Geantă - 80 RON</span>
+            </div>
+
+            <br>
+ 
+            <label for="cantitate">Cantitate:</label><br>
+            <input type="number" id="cantitate" name="cantitate" min="1" max="10" value="1" required><br><br>
+
+            <label for="marime">Mărime:</label><br>
+            <select id="marime" name="marime">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select><br><br>
+
+            
+            <label for="adresa">Adresă de livrare:</label><br>
+            <input type="text" id="adresa" name="adresa" required><br><br>
+
+            <label for="oras">Oraș:</label><br>
+            <input type="text" id="oras" name="oras" required><br><br>
+
+            <label for="cod">Cod poștal:</label><br>
+            <input type="text" id="cod" name="cod" required><br><br>
+
+             
+            <label>Metodă de plată:</label><br>
+            <input type="radio" name="plata" value="Card" required> Card<br>
+            <input type="radio" name="plata" value="PayPal"> PayPal<br>
+            <input type="radio" name="plata" value="Ramburs"> Ramburs<br><br>
+
+             
+            <label for="comentarii">Instrucțiuni suplimentare:</label><br>
+            <textarea id="comentarii" name="comentarii" rows="3"></textarea><br><br>
+
+             
+            <div class="buttons">
+                <button type="reset" class="btn-reset">Resetează</button>
+                <button type="submit" class="btn-submit">Trimite Comanda</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+<h1>3</h1>
+    <title>Formular Evaluare Eveniment</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+h2 {
+            color: #333;
+        }
+        label {
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 10%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 15px;
+        }
+        textarea {
+            height: 120px;
+        }
+        .range-value {
+            font-weight: bold;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+</style>
+
+
+
+
+
+
+
+ <div class="container">
+        <h2> Evaluarea unui Eveniment</h2>
+
+        <form>
+            <h3>Date despre participant</h3>
+            <label>Nume:</label>
+            <input type="text" required>
+
+            <label>Prenume:</label>
+            <input type="text" required>
+
+            <label>Număr de telefon:</label>
+            <input type="tel" required>
+<h3>Informații despre eveniment</h3>
+            <label>Tipul evenimentului:</label>
+            <select>
+                <option>Concert</option>
+                <option>Festival</option>
+                <option>Workshop</option>
+                <option>Conferință</option>
+            </select>
+<br>
+            <label>Data evenimentului:</label>
+            <input type="date">
+ <h3>Evaluare</h3>
+
+            <label>Locație (1-5):</label>
+            <input type="range" min="1" max="5" step="1">
+<br>
+            <label>Organizare (1-5):</label>
+            <input type="range" min="1" max="5" step="1">
+ <br>
+            <label>Activități (1-5):</label>
+            <input type="range" min="1" max="5" step="1">
+            <br>
+<label>Aspecte apreciate:</label>
+<br>
+            <input type="checkbox"> Locația<br>
+            <input type="checkbox"> Atmosfera<br>
+            <input type="checkbox"> Diversitatea activităților<br>
+            <input type="checkbox"> Personalul<br>
+
+            <label>Feedback detaliat:</label>
+            <br>
+            <textarea placeholder="Scrie aici feedback-ul tău..."></textarea>
+<h3>Scor general</h3>
+            <label>Scor (1-10):</label>
+            <br>
+            <input type="range" min="1" max="10" step="1">
+<br>
+            <label>Recomandări:</label><br>
+            <input type="radio" name="rec"> Recomand<br>
+            <input type="radio" name="rec"> Nu recomand<br><br>
+
+            <button class="submit-btn">Trimite evaluarea</button>
+        </form>
+    </div>
+
+
+
+
+    <h1>4</h1>
+<div class="container">
+        <h2> Rezervarea unui Pachet Turistic</h2>
+
+        <form>
+            <h3>Date personale</h3>
+            <label>Nume complet:</label>
+            <input type="text" required>
+
+            <label>Email:</label>
+            <input type="email" required>
+<br>
+            <label>Număr de telefon:</label>
+            <input type="tel" required>
+<h3>Informații despre destinație</h3>
+            <label>Selectează destinația:</label>
+            <select>
+                <option>Grecia – Santorini</option>
+                <option>Turcia – Antalya</option>
+                <option>Italia – Roma</option>
+                <option>Spania – Barcelona</option>
+                <option>Egipt – Hurghada</option>
+            </select>
+
+<label>Data plecării:</label>
+            <input type="date">
+<br>
+            <label>Data întoarcerii:</label>
+            <input type="date">
+
+            <h3>Tip de pachet</h3>
+            <select>
+                <option>All-inclusive</option>
+                <option>Doar cazare</option>
+                <option>Cazare + mic dejun</option>
+                <option>Demipensiune</option>
+                <option>Pensiune completă</option>
+            </select>
+<h3>Preferințe cazare</h3>
+            <label>Număr persoane:</label>
+            <input type="number" min="1" value="1">
+
+            <label>Tipul camerei:</label>
+            <select>
+                <option>Single</option>
+                <option>Double</option>
+                <option>Apartament</option>
+            </select>
+<h3>Opțiuni suplimentare</h3>
+            <input type="checkbox"> Excursii opționale<br>
+            <input type="checkbox"> Transfer aeroport<br>
+            <input type="checkbox"> Asigurare de călătorie<br>
+
+            <h3>Sumar cost estimat</h3>
+            <input type="text" placeholder="Ex:450€" disabled>
+
+            <button class="submit-btn">Trimite rezervarea</button>
+        </form>
+    </div>
+
+
+
+
+
+<h1>5</h1>
+<div class="container">
+        <h2>  Crearea unui Profil Detaliat</h2>
+        <form>
+
+            <h3>Informații personale</h3>
+
+            <label>Nume complet:</label>
+            <input type="text">
+
+            <label>Username:</label>
+            <input type="text">
+<br>
+            <label>Data nașterii:</label>
+            <input type="date">
+           
+<label>Gen:</label>
+            <select>
+                <option>Femeie</option>
+                <option>Bărbat</option>
+                <option>Altul</option>
+                <option>Prefer să nu spun</option>
+            </select>
+           
+            <h3>Detalii despre interes</h3>
+ 
+            <label>Hobby-uri:</label>
+            <input type="text" placeholder="Scrie hobby-urile tale">
+<br>
+            <label>Domenii de interes (selectează multiple):</label>
+            <select multiple  style="height: 160pxpx;" style=width:100cm;>
+                <option>Sport</option>
+                <option>Muzică</option>
+                <option>Artă</option>
+                <option>Gaming</option>
+                <option>Film</option>
+                 
+            </select>
+            <br>
+ <label>Limbi cunoscute (selectează multiple):</label>
+            <select multiple style="height:120px;">
+                <option>Română</option>
+                <option>Engleză</option>
+                <option>Franceză</option>
+                <option>Germană</option>
+                <option>Spaniolă</option>
+                <option>Italiană</option>
+            </select>
+<h3>Setări de confidențialitate</h3>
+
+            <input type="checkbox"> Afișează profilul public<br>
+            <input type="checkbox"> Afișează doar prietenilor<br>
+            <input type="checkbox"> Informațiile sunt private<br><br>
+
+            <h3>Fotografie de profil</h3>
+            <input type="file">
+
+            <h3>Biografie</h3>
+            <textarea placeholder="Scrie câteva cuvinte despre tine..."></textarea>
+<br>
+            <label>Link-uri social media:</label>
+            <input type="text" placeholder="Ex: https://instagram.com/...">
+
+            <button class="submit-btn">Salvează profilul</button>
+        </form>
+    </div>
+
+
+
+
+<h1>6</h1>
+<div class="container">
+        <h2>  Rezervarea unei Conferințe Online</h2>
+        <form>
+
+            <h3>Date personale</h3>
+
+            <label>Nume:</label>
+            <input type="text">
+
+            <label>Prenume:</label>
+            <input type="text">
+
+            <label>Email:</label>
+            <input type="email">
+ <h3>Tip de acces</h3>
+
+            <label>Selectează tipul de acces:</label>
+            <select>
+                <option>General – 20€</option>
+                <option>Premium – 50€</option>
+                <option>VIP – 100€</option>
+            </select>
+
+            <h3>Metoda de plată</h3>
+            <select>
+                <option>Card bancar</option>
+                <option>Transfer bancar</option>
+                <option>PayPal</option>
+            </select>
+<h3>Sesiuni preferate</h3>
+            <input type="checkbox"> Introducere în temă<br>
+            <input type="checkbox"> Workshop practic<br>
+            <input type="checkbox"> Întrebări & Răspunsuri<br>
+            <input type="checkbox"> Sesiune VIP cu speakerii<br><br>
+
+            <h3>Feedback opțional</h3>
+            <textarea placeholder="Scrie aici dacă ai preferințe sau întrebări..."></textarea>
+
+            <h3>Confirmări</h3>
+            <input type="checkbox"> Accept politicile de anulare<br><br>
+
+            <button class="submit-btn">Confirmă Rezervarea</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+    
